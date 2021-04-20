@@ -1,0 +1,438 @@
+---
+title: "Anatomy of Turkish Credit Growth: Credit Booms to Profit Busts"
+author: "Anıl İsmet AŞCI"
+output:
+  rmdformats::robobook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Acknowledgement**: I would like to offer my special thanks to Kağan Parmaksız for his supervision and assistance.
+
+## Introduction
+
+::: {style="text-align: justify;font-size: 15px;"}
+This study examines the rapid credit expansion periods from local branches of the banks to the private non-financial sector between 2009 and 2019 in Turkey along with the effect of credit expansion on the balances and profits of the Turkish private non-financial sector and the possible outcomes that expansion in the pandemic era.
+:::
+
+::: {style="text-align: justify;font-size: 15px;"}
+The organization of the page goes as follows: Firstly, rapid credit expansion periods (credit boom), their determination, sources, and the relationship between capital flows will be addressed. After that, by using the CBRT's [Company Accounts](http://www3.tcmb.gov.tr/sektor/2020/#/en), how the balance sheets and profits of the tradable and non-tradable sectors were affected by the credit boom; will be discussed over the indebtedness of companies, liquidity conditions of companies, and interest pressure on profits. Lastly, the possible affect of coronavirus pandemic on the private non-financial sector's indebtedness, which inherited from the last decade, and its impact on the government budget will be argued. For those who interested data and literature review can be found at the end of the page. Relevant tables for sectoral evaluation can be accessed from the [link](table.html)
+:::
+
+<br>
+
+::: {style="text-align: justify;font-size: 15px;"}
+Main findings of this study are:
+
+-   Rapid credit growth in terms of lira had occurred between 2013 and 2015, 2017, and 2019 when the private non-financial sector suffers from foreign exchange losses and the Turkish lira depriciated due to capital outflows.
+
+-   Rapid credit growth in terms of foreign exchange happened between 2009 and 2013 because of capital inflows.
+
+-   Credit Guarantee Fund (KGF) has an effect on credit growth after 2016. 75.3% of the credit growth in 2017, 38% of the credit growth in 2018, 39.1% of the credit growth in 2019 and 23.8% of the credit growth in 2020 are Treasury supported KGF backed credits. These calculations are based on nominal terms of credit due to publication standards of KGF.
+
+-   Increasing financing expenses of the non-tradable sector suppress their profits due to the increasing long-term financial debt.
+
+-   Tax restructuring programs for the micro sized companies are important for the Turkish economy since during the period micro sized companies are in loss and they constitute nearly 62.5% of the all companies.
+
+-   Even though the private non-financial sector's current assets can compensate for their short-term liabilities, more liquid assets obtained by subtracting inventories from current assets are not enough for compensating the short-term liabilities.
+
+-   Intra-sector and inter-sectoral debt increased throughout the period.
+:::
+
+# Credit Growth in Turkey
+
+::: {style="text-align: justify;font-size: 15px;"}
+Capital flows that increased their volume after the 80s with the liberalization of capital accounts can trigger economic growth with their inflow while causing an exchange rate and debt crises or a sudden stop with their outflow in the Emerging Market Economies (EME) under the floating exchange rate regime. Capital inflows also boost the credit growth in the local economy. The 2009 Turkish real sector crisis, [which emerged with the decrease in global foreign trade volume after the 2008 crisis](https://erc.metu.edu.tr/en/system/files/menu/series18/1809.pdf), enabled funding through the credit channel with the capital inflows that started in the same period; which repeated during the European Debt Crisis although the size of capital inflows decreased relatively.
+
+After the FED announced the tapering the quantative easing in 2013, capital flows started to turn from EME to advanced economies which resulted the depreciation of the local currencies of the EME. However, credit expansion was observed during that period in Turkey and continued simultaneously again with the depreciation of the lira, except at the 2018 Sudden Stop. In addition, if the rapid credit growth periods evaluated with the company accounts, it is noticeable that they coincide with the periods when firms experience foreign exchange losses which indicate those credits are also used for covering the losses incurred other than investment.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/inflow.R")
+
+egr
+
+```
+
+<br>
+
+::: {style="text-align: justify;font-size: 15px;"}
+An important issue on the rapid credit expansion periods is how to identify them. There are a few methods to detect credit booms, one of which was created by [Gourinchas, Valdes, and Landerretche (2001)](https://econpapers.repec.org/paper/nbrnberwo/8249.htm). They defined the credit boom as, a specific time period the ratio of private credit to GDP exceeding %15, and they constructed a five-year event window around the credit boom to analyze the macroeconomic variables. They found out that, for Latin American countries, credit booms are often followed or accompanied by a banking or a currency crisis. This method does not apply to Turkey since the credit to GDP ratio exceeds 30% during the period but credit boom in 2017 followed by a currency crisis and sudden stop.
+
+Mendoza and Terrones (2008) proposed a threshold method to identify credit booms and constructed a seven-year event window. The method suggests a credit boom exists if HP trended per capita real credit exceeded its standard deviation times a baseline value, equal to 1.75. Also, they showed that many of the emerging market crises and sudden stops associated with credit booms and non-tradable sectors' micro indicators fluctuate sharply
+
+Elekdağ and Wu (2011) use the same methodology as Mendoza and Terrones, but they used baseline value equal to 1.55 to detect few significant booms in Asia. Orhangazi (2014) uses the same method without an event window for 2004-2013Q2 to detect Turkish credit booms which can be seen picture below.
+:::
+
+<br>
+
+::: {align="top"}
+<img src="http://users.metu.edu.tr/e214755/orhangazi.png"/>
+:::
+
+<br>
+
+::: {style="text-align: justify;font-size: 15px;"}
+In this study, the quarterly real credit growth will be used for determining the credit booms period. Credit in terms of lira and foreign exchange evaluated separately. Also, the effect of inflation and valuation of the foreign exchange is eliminated by using the inflation data from CBRT and basket of foreign exchange that weighs Dollar and Euro at the same rate.
+:::
+
+<br>
+
+## Quarterly Credit Growth
+
+::: {style="text-align: justify;font-size: 15px;"}
+Credit growth in terms of lira from local branches of the banks to private non-financial sector, increased after the 2008 except 2018 Sudden Stop in Turkey. Rapid credit expansion periods are visible and credit booms occurred between 2013 and 2015, in 2017 and in 2019. In the later periods duration of credit booms are shorter but the volumes are larger. Fall in interest rates are effective on the credit boom between 2013 and 2015, and in 2019 but the credit boom in 2017 is caused by Treasury support provided to Credit Guarantee Fund (KGF) in 2016 and the amount of support increased from 2 billion Turkish lira to 20 Billion Turkish lira in 2017.
+
+Credit Growth in terms of foreign exchange basket from local branches of the banks to private non-financial sector, had increased with the capital inflow to Turkey between 2009 and 2013. Increase of foreign exchange dominated credits decreased during the European Debt crisis. The effect of funding of the Public-Private Partnership (PPP) projects should be noticed. For those who interested in PPP projects' effects on foreign currency indebtedness of private non-financial sector in Turkey may review the [Çolak and Yılmaz (2017)](https://www.tcmb.gov.tr/wps/wcm/connect/b1afda70-a1bb-40c4-be10-b2a43e413fa0/en1709eng.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-b1afda70-a1bb-40c4-be10-b2a43e413fa0-m3fw5y4) and [23. Financial Stability Report page 31](https://www.tcmb.gov.tr/wps/wcm/connect/5be2943e-955e-4754-93cc-392904f8c811/fulltext23.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-5be2943e-955e-4754-93cc-392904f8c811-m3fw7As).
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE }
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/kredideg.R")
+
+etotkr
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+In the lira-denominated credit boom of 2013-2015, the amount of newly issued credits from private and public banks are nearly similar while in the credit boom of 2017 and 2019 it is obvious that, public banks are the motor of the credit growth. Also, the participation banks, which have a small effect on credit growth, increased the amount of lira-denominated credits issued to private non-financial sector at a remarkable rate after the 2016.
+
+The error in the graph between private and foreign deposit banks in the first quarter of 2016 arose due to locally-owned private deposit bank was sold to a foreign bank.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE }
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/kredideg.R")
+
+etlkr
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+On the other hand, credit growth in terms of the foreign exchange basket increased with the capital inflows and it was provided largely by the private banks and it decreased after 2015. Participation banks have increased the amount of foreign currency credit after 2017, similar to the credits they issued in terms of the lira.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE }
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/kredideg.R")
+
+eypkr
+
+```
+
+## Credit Guarantee Fund
+
+::: {style="text-align: justify;font-size: 15px;"}
+Credit Guarantee Fund (KGF) was established in 1991 and started to act as a guarantor for credits to non-financial private sector since '94. The guarantees given by KGF remained low until 2015. After the Treasury support provided in [December 2016](https://www.resmigazete.gov.tr/eskiler/2016/11/20161122-3.pdf) and the amount of which was further increased in [March 2017](https://www.resmigazete.gov.tr/eskiler/2017/03/20170310-11.pdf), credits guaranteed by KGF increased at an unprecedented level.
+
+Unfortunately, KGF had not published its 2019 and 2020 annual reports in English. Also, the Turkish version of the activity report of 2019 had published simultaneously with the 2020 annual report [in 2021.](https://www.kgf.com.tr/index.php/tr/bilgi-merkezi/faaliyet-raporlari) A snapshot provided by archive.org for [26.09.2020](https://web.archive.org/web/20200926000625/https://www.kgf.com.tr/index.php/tr/bilgi-merkezi/faaliyet-raporlari) proves that.
+:::
+
+<br>
+
+::: {align="top"}
+<img src="http://users.metu.edu.tr/e214755/kgf3.png"/>
+:::
+
+<br>
+
+::: {style="text-align: justify;font-size: 15px;"}
+KGF publishes the amount of credit guaranteed by them, in nominal terms and without discriminating the foreign currency and lira units of credit, thus the calculations in this part will be over nominal terms while ignoring the valuation effect of foreign currencies.
+
+Between 1994 and 2015 KGF provided guarantee to near 10 billion lira of credit (second value from right) and the amount increased to 6.682 million lira in 2016, near 208 billion lira in 2017, near 86 billion lira in 2018, 73.5 billion lira in 2019 and 203.5 billion lira in 2020. Which corresponds to 75.3% of the credit growth in 2017, 38% of the credit growths in 2018, 39.1% of the credit growth in 2019, and 23.8% of the credit growth in 2020 in nominal terms.
+:::
+
+<br>
+
+::: {align="top"}
+<img src="http://users.metu.edu.tr/e214755/221.png"/>
+:::
+
+<br>
+
+::: {style="text-align: justify;font-size: 15px;"}
+In addition, in case the KGF guaranteed credits go into default, it is possible that these losses may expose itself to the fiscal space by the duty losses of the public banks and requirement of funding from the treasury for bailing out those losses by KGF. The increase of duty losses of public banks and the support provided KGF by treasury are noticeable especially after 2017. However, there are also losses arising from the foreign exchange among those.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/batik.R")
+
+eaa
+
+```
+
+# Effect of Credit Booms on Private Non-financial Sector
+
+::: {style="text-align: justify;font-size: 15px;"}
+In this part of the study, how the profits of the Turkish private non-financial sector decreased due to foreign exchange shocks and increasing financing expanses will be evaluated. In addition, firms dependency on credits and reduced ability to pay their debts will be shown by using the [CBRT Company Accounts](http://www3.tcmb.gov.tr/sektor/2020/#/en). Although the aggregated dataset used for this part may cause some biases. Some of the sub-sectors that forms up the tradable and non-tradable sectors are larger than the other sectors and this cause misleading results for smaller sub-sectors. Sectoral Evaluation can be reached by this [link.](https://table.html)
+
+The real sector analysis will be carried out on income statements and balance sheets, respectively. Accounts that may affect profits like net operating profits, income from other operations, and financing expenses will be evaluated by income statements while the indebtedness and the firms ability to pay their debts will be determined by balances.
+:::
+
+<br>
+
+## Income Statements
+
+::: {style="text-align: justify;font-size: 15px;"}
+For readers unfamiliar with the income statement, there is a basic explanation. Profits are equal to the sum of operating profits, net income from other operations, extraordinary net income minus financing expenses and taxes. Operational profit is net sales minus cost of goods sold and operating expenses. When cost increases relative to net sales or net sales decreases relative to costs, operational profits decrease. Moreover, other operations accounts contain foreign exchange losses and profits, which constitutes a large part of that account and which is more volatile than other components. It will be a proxy for foreign exchange shocks on profits. Also, extraordinary net incomes include losses and earnings from fixed assets sales, excluding other expenses account. This ratio is negative if the assets are sold at a lower price than its depreciated price, which indicates the need for liquidity. Financial expenses are interest payments of short and long-term credits. These accounts form profits before taxes. Extracting provisions for taxes and other liabilities to the government from that equals net profit.
+:::
+
+<br>
+
+::: {align="top"}
+<img src="http://users.metu.edu.tr/e214755/1507.jpeg" width="384" height="500"/>
+:::
+
+<br>
+
+::: {style="text-align: justify;font-size: 15px;"}
+During the period, operating profits changes with the size and type of the firms. Operating profits to net sales decreases as firm size gets smaller. Also, small medium and micro sized firms decreasing operating profits to net sales ratio increases after 2016. For large-scale companies, this fluctuation continues around 2014. While this ratio increases at the end of the period for large and medium sized companies, for small and micro sized companies that ratio changes with the type of the firm. Small and micro sized tradable sectors increased the ratio with exports, non-tradable sectors' operating profits to net sales ratio decreased compared to 2009.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+efaka
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+Even though the net income from other operations to net sales ratio varies, it decreases in the years when the Turkish lira depreciated except for small sized firms. The net income from other operations to net sales ratio is close to the operating profits to net sales which confirms the thesis of [Demiröz and Erdem (2018](https://www.routledge.com/The-Political-Economy-of-Financial-Transformation-in-Turkey/Yalman-Marois-Gungen/p/book/9780367584962)) that with the liberalization of capital accounts, the effectiveness of accounts other than operating income increased in the income statement. In brief, losses resulting from the depreciation of the lira can be analyzed through this account.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+enfdg
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+The ratio of financing expenses to earnings before interest and tax (EBIT) shows the companies' profits and their ability to pay the interests of their long and short term credits.By adding extraordinary revenues and financing expenses to EBIT, profit before tax is obtained. As extraordinary income is relatively smaller than finance expenses, the increase in finance costs is more robust variable for the decrease in profit before tax.
+
+During the period, with the increase in the use of credit as an external finance source by the private non-financial firms, interest payments increased, and consequently, the profitability in non-tradable sectors decreased, and the profitability in the tradable sectors remained stable with the effect of exports. Another noteworthy thing is small and micro-sized firms with relatively low long and short-term financial liabilities seem to have high financing expenses due to low profit before tax margins.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+efe
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+Non-tradable sectors with increasing operating profits towards the end of the period have lower profit to net sales ratio compared to the 2009 due to increased financing costs and exchange rate shocks. However, tradable sectors able to keep their profit to net sales ratio within a certain range with the exports. Besides the relatively small operating profits to net sales ratio, micro-sized firms constitute 62.5% of the overall number of firms and during the periods they are usually at a loss which indicates the importance of the tax restructuring policies implemented by the government for those firms.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+enp
+
+```
+
+## Indebtedness
+
+::: {style="text-align: justify;font-size: 15px;"}
+During the period financial liabilities of the firms had increased. The ratio of financial liabilities to total liabilities of large and medium-sized non-tradable sectors had surpassed the tradable sectors of the same size. Also, the difference of that ratio between small and micro-sized tradable and non-tradable sectors decreases through the period. That increase in financial liabilities of non-tradable sectors caused by use of long-term credits by that sectors.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+ecr
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+Another indicator related to indebtedness is the trade and other debts. The increase in these debts may show the size of indebtedness within and between the sectors. The ratio of trade and other debts to total liabilities increasing through the period. This ratio changes for the large-sized firms according to the type of the firm. After 2012, this ratio remained rather stable for the tradable sectors while increasing for the non-tradable sectors.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+eddebt
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+The liabilities of the firms increased during the period. The high indebtedness of the firms increases the fragility of the economy. In a case of sudden income shock, that indebtedness may ignite a debt crisis, and with the increasing use of credit that crisis may stress the financial system. Since the individual conditions of the firms and their relation with the banks cannot be evaluated through the aggregated dataset, the transmission of defaulted debts across sectors and which banks will be affected cannot be shown.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+ealld
+```
+
+## Debt Payment Capacity
+
+::: {style="text-align: justify;font-size: 15px;"}
+In this part, firms ability to the pay their short-term liabilities with the current assets and acid test score will be checked. From the graph below, it can be interpreted that all private non-financial firms able to compensate their short-term liabilities with their current assets but when the inventories excluded from the current assets, in other word the acid test score, firms are unable to reimburse their short-term liabilities regardless of their size.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/fimalar.R")
+
+erep
+```
+
+## Conclusion for Private Non-financial Sector
+
+::: {style="text-align: justify;font-size: 15px;"}
+With the increasing use of credit throughout the period, non-tradable sectors have lower profit margins compared to the past due to increased financing costs and exchange rate shocks. Interest payments supresses profits of those sectors which confirms the [Bernanke and Gertler (1995)](https://www.aeaweb.org/articles?id=10.1257/jep.9.4.27) thesis, use of credit as an external finance in an environment where the interests are increasing, decreases the profits since the financial expenses to earning before interest and tax rate is increasing. Tradable sectors, on the other hand, kept their profits constant within a certain range according to their size, with increasing export revenues with the depreciation of the lira. Government's tax resturcturing policies have created an important source of income for micro-sized companies, but created a burden on public revenues.
+
+Also, the trade and other debts of firms had increased, as well as their financial liabilities. In addition, the commercial and other debt of companies increased, as well as their financial debts. It does not seem possible for firms to pay these debts without selling their inventories. Indebtedness of firms had turned into a threat not only for banks but also to the other sectors in the pandemic era.
+:::
+
+<br>
+
+# Possible Scenarios Under Coronavirus Pandemic
+
+::: {style="text-align: justify;font-size: 15px;"}
+This study examines the indebtedness and profitability of firms in the period before the pandemic, which also sheds light on the problems inherited from the last decade. Coronavirus pandemic amplifies those problems, especially for the EME. Measures taken against the pandemic halted the activities of some sectors, disrupted production, global supply chains, and trade. The pandemic also caused absentee from work and unemployment, resulting in an overall fell in income for some groups, notably day-labourers in Turkey, and arose both supply and demand-side shocks.
+
+In the first year of the pandemic, another credit boom at an unprecedented level had occurred with the rapid devaluation of the lira, even though the pre-pandemic high level of indebtedness of Turkish firms. The current economic conditions together with the ongoing pandemic bring to mind the problems that may be encountered in the near future.
+:::
+
+<br>
+
+## The Effect of Credit Expansion on Growth
+
+::: {style="text-align: justify;font-size: 15px;"}
+In orthodox economic theory, firms use external finance for increasing their investment and decrease their production costs which in the long-run increases profits. However, that external finance can also be used for sustaining liquidity and capital requirement, and for payments of those debts. In that case proportion of external finance left for investment and internal finance determines the level of investment.
+
+Financial liabilities to total liabilities ratio increases while the short-term trade and other debts to total liabilities are decreasing for non-tradable medium, small, and micro-sized sectors and the tradable large, small, and micro-sized sectors in 2018. That shows the portion of the external finance left for investment had decreased in that year.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/borc.R")
+
+eborc2
+
+```
+
+::: {style="text-align: justify;font-size: 15px;"}
+In addition, profits of non-tradable sectors that stressed as a result of increased financing expenses may stumble the internal financing sources. Since those sectors compose 42% of the total balance sheet size of the private non-financial sector, interest payments may decrease overall spending on capital goods.
+
+Also, short-term liabilities cannot be compensated with liquid assets which means firms need to sell their inventories or produce goods with them while the maturities of credits increased by rearrangements or/and generate enough external or internal finance. With the credit boom in 2020 firms may buy some time but due to disruptions in the economy, it might not be enough.
+:::
+
+<br>
+
+## Default Risks and Fiscal Implications
+
+::: {style="text-align: justify;font-size: 15px;"}
+The risk of KGF guaranteed credits go into default increased with the income shock caused by the pandemic. Also, duty losses of the state banks emerged by the KGF guaranteed credits, and bailing outs of KGF guaranteed credits issued by both private and public banks may transmit the cost of defaulted credits to fiscal space. The increase in duty losses of public banks and the size of the support provided to KGF by the treasury within the period is noticeable after 2017. This situation worsens the treasury balance sheet, which is already running a budget deficit and worsened under pandemic conditions.
+:::
+
+<br>
+
+::: {align="center"}
+<img src="http://users.metu.edu.tr/e214755/222.png" width="828" height="200"/>
+:::
+
+::: {style="text-align: justify;font-size: 15px;"}
+In addition, credits that principal and/or interests payments had delayed 3 to 12 months increased during the period notably after 2018 Sudden Stop. However, with the pandemic the maturity of those risky credits had delayed to the end of 2020 which later delayed again to the end of the first half of the 2021. Default risk of those credits might had a negative impact on government budget since credits from local branches of the banks to private non-financial credits had issued predominantly from the public banks and guaranteed usually by the KGF which supported by the treasury.
+:::
+
+<br>
+
+```{r, warning=FALSE,message=FALSE,echo=FALSE , out.width="100%"}
+
+source("C:/Users/aiasc/OneDrive - metu.edu.tr/desktop/R/makale_github/slayt/qwe.R")
+
+eqwe
+
+```
+
+# Data
+
+## Credit Data
+
+::: {style="text-align: justify;font-size: 15px;"}
+There are few sources for Turkey's credit data. One of them is the Bank for International Settlements ([BIS](https://www.bis.org/statistics/totcredit.htm?m=6%7C380%7C669)) dataset; another one is [CBRT](https://evds2.tcmb.gov.tr/). BIS dataset contains quarterly credit to households, non-financial firms and general government from banks and all sectors. However, we could not differentiate the credit in local currency and foreign exchange terms from that dataset, so eliminating valuation effects is not possible. Instead, CBRT's dataset will be used to obtain credit to non-financial firms from banks. Even though the credit from [banks' local branches](https://evds2.tcmb.gov.tr/index.php?/evds/DataGroupLink/5/bie_kredi/en) might be used as a proxy for that purpose; that data lead to a bias. After all, the data contains credits to households and non-financial firms with their credit card expenditure. Also, cyclicality of consumer credit might differ from credit to firms in specific periods which creates a bias for quarterly changes of credit. Extracting the [credits to households and individuals credit card expenditures](https://evds2.tcmb.gov.tr/index.php?/evds/DataGroupLink/5/bie_bftukkre/en) from that data will lead us to credits to non-financial firms from banks in terms of currency units and types of banks. Also, the effect of inflation and valuation of the exchange rate from the data is eliminated by using the inflation data from CBRT and basket of foreign exchange that weighs Dollar and Euro at the same rate.
+:::
+
+<br>
+
+## Sectoral Data
+
+::: {style="text-align: justify;font-size: 15px;"}
+For sectoral indicators, balance sheets and income statements from CBRT's [Company Accounts](http://www3.tcmb.gov.tr/sektor/2020/#/en) are used. Dataset separates companies according to their size. Moreover, sectoral data categorized as tradable and non-tradable by the author for easing the evaluation, but that caused some problems.
+
+First and foremost, there are many methods to classify the tradability of each sector. Depending on some openness ratio, a sector is classified as a tradable sector; however, that ratio is not reconsidered for sizes of the firms that amass that specific sector. For instance, agriculture is accepted as a tradable sector though the exports' share of sales decreases with the size of the firms. Large agricultural firms' exports consist of 30% of total sales while that ratio decreases to 2.8% for micro-sized agricultural firms. Nonetheless, construction firms usually accepted as a non-tradable sector, but large construction firms' exports to sales are 10%. Sectors that classified as a tradable need to change with the size of the firms. Also, the openness of a sector may change in time. In this paper, a sector is assumed to be tradable if its export to sales ratio is larger or equal to 7.5% for equal or more than four years.
+
+Also, some sectors' relative size in tradable and non-tradable sectors might be large and mislead the result; thus, firms' relative sizes and export to sales ratios can be reached from this [link](https://github.com/aiasci/credit/raw/main/data_en.xlsx).
+:::
+
+<br>
+
+# References
+
+::: {style="text-align: justify;font-size: 15px;"}
+-   Akyüz, Y. (2014). Internationalization of Finance and Changing Vulnerabilities in Emerging and Developing Economies. [UNCTAD Discussion Papers, No:217.](https://unctad.org/system/files/official-document/osgdp20143_en.pdf)
+
+-   Bernanke, B., & Gertler, M. (1995). Inside the black box: The credit channel of monetary policy transmission. [doi:10.3386/w5146](https://www.aeaweb.org/articles?id=10.1257/jep.9.4.27){.uri}
+
+-   Binici, M., & Köksal, B. (2012). Determinants of Credit booms in Turkey. SSRN Electronic Journal. [doi:10.2139/ssrn.2038297](https://mpra.ub.uni-muenchen.de/38032/1/MPRA_paper_38032.pdf){.uri}
+
+-   Calvo, G. A. (1998). Capital flows and capital-market crises: The simple economics of sudden stops. Journal of Applied Economics, 1(1), 35-54. [doi:10.1080/15140326.1998.12040516](https://www.researchgate.net/publication/4928094_Capital_Flows_and_Capital-Market_Crises_The_Simple_Economics_of_Sudden_Stops){.uri}
+
+-   Cavallo, E. A. (2019). International capital flow reversals. [doi:10.18235/0001809](https://publications.iadb.org/publications/english/document/International_Capital_Flow_Reversals__en.pdf){.uri}
+
+-   Cordoba, J., & Ripoll, M. (2004). Credit cycles redux. International Economic Review, 45(4), 1011-1046. [doi:10.1111/j.0020-6598.2004.00296.x](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0020-6598.2004.00296.x){.uri}
+
+-   Cömert, H., & Yeldan, E. (2018). A tale of Three Crises made in Turkey: 1994, 2001 and 2008--09 1. The Political Economy of Financial Transformation in Turkey, 88-107. [doi:10.4324/9781315669632-4](https://erc.metu.edu.tr/en/system/files/menu/series18/1809.pdf){.uri}
+
+-   Demiröz, D., & Erdem, N. (2018). The Turkish Corporate Sector in the Era of Financialization: Profitability and M&As. [The Political Economy of Financial Transformation in Turkey](https://www.routledge.com/The-Political-Economy-of-Financial-Transformation-in-Turkey/Yalman-Marois-Gungen/p/book/9780367584962), 184-220, Routledge.
+
+-   Elekdag, S., & Wu, Y. (2011). Rapid credit Growth: Boon or Boom-Bust? IMF Working Papers, 11(241), 1. [doi:10.5089/9781463922627.001](https://www.imf.org/en/Publications/WP/Issues/2016/12/31/Rapid-Credit-Growth-Boon-or-Boom-Bust-25305){.uri}
+
+-   Gertler, M., & Gilchrist, S. (1991). Monetary policy, business cycles and the behavior of small manufacturing firms. [doi:10.3386/w3892](https://uh.edu/~bsorense/Gertler&Gilchrist.MP%20business%20cycles%20and%20behavior%20of%20small%20manufactoring%20firms.pdf){.uri}
+
+-   Gourinchas, P., Valdes, R., & Landerretche, O. (2001). Lending booms: Latin America and the world. [doi:10.3386/w8249](https://www.researchgate.net/publication/4752801_Lending_Booms_Latin_America_and_the_World){.uri}
+
+-   Mendoza, E., & Terrones, M. (2008). An anatomy of Credit booms: Evidence from Macro aggregates and micro data. [doi:10.3386/w14049](https://www.imf.org/en/Publications/WP/Issues/2016/12/31/An-Anatomy-of-Credit-Booms-Evidence-From-Macro-Aggregates-and-Micro-Data-22257){.uri}
+
+-   Minsky, H. P. (1992). The financial instability hypothesis. SSRN Electronic Journal. [doi:10.2139/ssrn.161024](http://www.levyinstitute.org/pubs/wp74.pdf){.uri}
+
+-   Orhangazi, Ö. (2014). Capital flows and Credit expansions in Turkey. Review of Radical Political Economics, 46(4), 509-516. [doi:10.1177/0486613414537993](https://journals.sagepub.com/doi/10.1177/0486613414537993){.uri}
+:::
